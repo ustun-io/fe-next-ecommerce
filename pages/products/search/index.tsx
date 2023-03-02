@@ -3,7 +3,7 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from
 import { ProductGrid } from '@module/product/view/product-grid.view'
 import { Container } from '@shared/component'
 import { searchProducts } from '@shared/service'
-import { dehydrate, QueryClient } from "@tanstack/react-query"
+import { dehydrate, QueryClient } from '@tanstack/react-query'
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const queryClient = new QueryClient()
@@ -33,7 +33,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 const ProductSearch: NextPage<ProductSearchView> = () => {
   return (
     <Container>
-      <ProductGrid/>
+      <ProductGrid />
     </Container>
   )
 }
