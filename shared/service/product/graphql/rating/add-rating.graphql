@@ -1,0 +1,7 @@
+mutation AddRating($data: CreateRatingInput!) {
+  createRating(data: $data) {
+    id
+    text
+    star
+  }
+}

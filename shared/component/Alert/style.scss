@@ -1,0 +1,8 @@
+.alert-hidden {
+  opacity: 0;
+  transition: all 150ms linear 1s;
+}
+
+.alert-shown {
+  opacity: 100%
+}

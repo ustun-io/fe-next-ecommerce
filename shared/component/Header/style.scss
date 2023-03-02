@@ -1,0 +1,15 @@
+@media (prefers-color-scheme: dark) {
+  .header-logo {
+    background: no-repeat center / contain url("../../../public/image/advantex/advantex-logo-dark-mode.png");
+    height: 3rem;
+    width: 3.75rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .header-logo {
+    background: no-repeat center / contain url("../../../public/image/advantex/advantex-light-mode.png");
+    height: 3rem;
+    width: 3.75rem;
+  }
+}

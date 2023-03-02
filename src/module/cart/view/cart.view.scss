@@ -1,0 +1,15 @@
+.item-enter {
+  @apply opacity-0 -z-10;
+}
+
+.item-enter-active {
+  @apply opacity-100 ease-in transition-opacity duration-200;
+}
+
+.item-exit {
+  @apply opacity-100;
+}
+
+.item-exit-active {
+  @apply opacity-0 ease-out transition-opacity duration-300;
+}

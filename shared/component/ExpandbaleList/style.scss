@@ -1,0 +1,43 @@
+.list-label-display {
+  @apply flex justify-between items-center;
+}
+
+.list-label-typography {
+  @apply font-medium font-inter uppercase text-2xl text-cool-gray-100 active:text-cool-gray-400;
+  @apply select-none cursor-pointer;
+}
+
+.list-label-spacing {
+  @apply py-2 pr-2;
+}
+
+.list-label-border {}
+
+.list-label-animation {
+  @apply transition ease-in duration-150;
+}
+
+.list-label {
+  @apply list-label-display list-label-typography list-label-spacing list-label-animation;
+}
+
+.sublist-label {
+  @apply list-label;
+  @apply text-lg tracking-wider;
+}
+
+.list-label-container-enter {
+  @apply opacity-0 -z-10;
+}
+
+.list-label-container-enter-active {
+  @apply opacity-100 ease-in transition-opacity duration-200;
+}
+
+.list-label-container-exit {
+  @apply opacity-100;
+}
+
+.list-label-container-exit-active {
+  @apply opacity-0 ease-out transition-opacity duration-300;
+}

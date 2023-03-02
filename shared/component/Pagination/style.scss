@@ -1,0 +1,40 @@
+.paginate-button-typography {
+  @apply text-cool-gray-100 text-sm
+}
+
+.paginate-button-spacing {
+  @apply py-2 px-4
+}
+
+.paginate-button-border {
+  @apply rounded border border-blue-gray-400 bg-blue-gray-800 shadow
+}
+
+.paginate-button-animation {
+  @apply transition duration-200 ease-in
+}
+
+.paginate-n-button {
+  @apply paginate-button-typography paginate-button-spacing paginate-button-border paginate-button-animation;
+  @apply select-none cursor-pointer;
+}
+
+.paginate-n-button-active {
+  @apply paginate-n-button;
+  @apply bg-cool-gray-700 border-cool-gray-500;
+}
+
+.paginate-container {
+  @apply flex items-center justify-center space-x-2;
+}
+
+.paginate-navigation-button {
+  @apply paginate-button-typography paginate-button-border paginate-button-animation;
+  @apply py-1.5 px-3;
+  @apply select-none cursor-pointer;
+}
+
+.paginate-break-label {
+  @apply mx-1 text-blue-gray-100;
+  @apply select-none cursor-pointer;
+}

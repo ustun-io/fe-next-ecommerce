@@ -1,0 +1,24 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@layer base {
+  h1 {
+    @apply text-5xl text-primary-700 dark:text-primary-400 font-medium;
+  }
+  h2 {
+    @apply text-4xl text-primary-700 dark:text-primary-400 font-medium;
+  }
+  h3 {
+    @apply text-3xl text-primary-700 dark:text-primary-400;
+  }
+  h4 {
+    @apply text-2xl text-primary-700 dark:text-primary-400;
+  }
+  h6 {
+    @apply text-primary-700 dark:text-primary-400;
+  }
+  p {
+    @apply text-base dark:text-primary-400;
+  }
+}
+// end

@@ -1,0 +1,6 @@
+query Ram {
+  getRamOptions {
+    label
+    value
+  }
+}

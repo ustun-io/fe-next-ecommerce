@@ -1,0 +1,71 @@
+.nav-item {
+  @apply font-inter text-lg font-light text-blue-400 dark:text-blue-50 py-0.5 px-2.5 transition duration-300 ease-in-out mx-1 rounded;
+  &:hover {
+    @apply text-blue-500 dark:text-blue-200;
+  }
+  &.active {
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.5rem;
+    @apply h-full font-medium underline text-blue-600 dark:text-blue-50;
+    &:hover {
+      @apply text-secondary-800 dark:text-blue-200;
+    }
+  }
+}
+.hamburger-item {
+  @apply font-inter h-full text-secondary-700 dark:text-secondary-default py-0.5 px-1.5 transition duration-300 ease-in-out mx-1 rounded;
+  &:hover {
+    @apply bg-primary-200 dark:bg-transparent font-medium text-primary-400 dark:text-primary-300;
+  }
+  &:active {
+    @apply text-primary-400 dark:text-primary-100;
+  }
+  &.active {
+    @apply h-full font-medium bg-primary-800 dark:bg-transparent underline text-secondary-300 dark:text-primary-400;
+    &:hover {
+      @apply bg-primary-800 dark:bg-transparent text-secondary-300 dark:text-primary-400;
+    }
+  }
+}
+
+.slide-url {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.slide-url::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 5px;
+  background: #000;
+  transition: width 1s;
+}
+
+.slide-url:hover::after {
+  width: 100%;
+  transition: width 1s;
+}
+
+.slide-url-2 {
+  display: inline-block;
+  color: #303030;
+  text-decoration: none;
+}
+
+.slide-url-2::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 5px;
+  background: #303030;
+  transition: width 750ms;
+}
+
+.slide-url-2:hover::after {
+  width: 100%;
+  transition: width 750ms;
+}

@@ -1,0 +1,26 @@
+query SearchProducts($paginationArgs: PaginationArgsInput!, $search: String!, $sortArgs: SortArgsInput!) {
+  searchProducts(paginationArgs: $paginationArgs, search: $search, sortArgs: $sortArgs) {
+    count
+    page
+    limit
+    data {
+      id
+      name
+      brand {
+        name
+      }
+      category {
+        name
+      }
+      thumbnail
+      price
+      discount
+      stock
+      ratingAverage
+      cpu
+      ram
+      screen
+      storage
+    }
+  }
+}

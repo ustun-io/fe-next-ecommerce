@@ -1,0 +1,35 @@
+query Products($paginationArgs: PaginationArgsInput!, $sortArgs: SortArgsInput!, $filterArgs: FilterArgsInput!) {
+    products(paginationArgs: $paginationArgs, sortArgs: $sortArgs, filter: $filterArgs) {
+      count
+      page
+      limit
+      filter {
+        ram
+        storage
+        brand
+        category
+        search
+        priceMin
+        priceMax
+      }
+      data {
+        id
+        name
+        brand {
+          name
+        }
+        category {
+          name
+        }
+        thumbnail
+        price
+        discount
+        stock
+        ratingAverage
+        cpu
+        ram
+        screen
+        storage
+      }
+    }
+  }

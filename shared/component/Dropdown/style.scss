@@ -1,0 +1,24 @@
+.dropdown-button-display {
+  @apply flex items-center justify-center max-w-[17rem];
+}
+
+.dropdown-button-typography {
+  @apply font-medium font-inter uppercase text-sm text-cool-gray-100 active:text-cool-gray-400;
+  @apply select-none cursor-pointer;
+}
+
+.dropdown-button-spacing {
+  @apply py-2 px-3;
+}
+
+.dropdown-button-border {
+  @apply rounded border border-cool-gray-400 shadow;
+}
+
+.dropdown-button-animation {
+  @apply transition ease-in duration-150;
+}
+
+.dropdown-button {
+  @apply dropdown-button-display dropdown-button-typography dropdown-button-spacing dropdown-button-border dropdown-button-animation;
+}
