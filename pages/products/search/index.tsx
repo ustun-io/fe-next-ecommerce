@@ -3,8 +3,10 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType, NextPage } from
 import { ProductGrid } from '@module/product/view/product-grid.view'
 import { Container } from '@shared/component'
 import { searchProducts } from '@shared/service'
+import { dehydrate, QueryClient } from '@tanstack/react-query'
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const queryClient = new QueryClient()
   const {
     query: { page, limit, sort, q }
   } = context
@@ -18,16 +20,20 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
       limit: parseInt(limit as string)
     },
     q as string,
-    { sortBy, sort: sortMethod }
+    { sortBy, sortDir: sortMethod }
   )
 
-  return { props: { data: data.searchProducts, loading, error: error || null, count: data.searchProducts.count } }
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient)
+    }
+  }
 }
 
-const ProductSearch: NextPage<ProductSearchView> = ({ data, loading, error, count }) => {
+const ProductSearch: NextPage<ProductSearchView> = () => {
   return (
     <Container>
-      <ProductGrid data={data} loading={loading} error={error} count={count} />
+      <ProductGrid />
     </Container>
   )
 }
